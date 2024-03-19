@@ -1,0 +1,584 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<script type="text/javascript" charset="utf-8" src="https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script> 
+<!---
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+--->
+
+
+<style type="text/css">
+body {
+    font-family: "Titillium Web", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (min-width: 980px){
+    body {
+        width: 980px;
+    }
+}
+
+
+h1 {
+    font-weight:300;
+    line-height: 1.15em;
+}
+
+h2 {
+    font-size: 1.75em;
+}
+a:link,a:visited {
+    color: #5364cc;
+    text-decoration: none;
+}
+a:hover {
+    color: #208799;
+}
+h1 {
+    text-align: center;
+}
+h2,h3 {
+    text-align: left;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 500;
+}
+h2 {
+    font-weight: 400;
+    margin: 16px 0px 4px 0px;
+}
+h3 {
+    font-weight: 600;
+    margin: 16px 0px 4px 0px;
+}
+
+.paper-title {
+    padding: 1px 0px 1px 0px;
+}
+section {
+    margin: 32px 0px 32px 0px;
+    text-align: justify;
+    clear: both;
+}
+.col-5 {
+     width: 20%;
+     float: left;
+}
+
+.move-down {
+    margin-top:1.2cm;
+}
+
+.col-4 {
+     width: 25%;
+     float: left;
+}
+.col-3 {
+     width: 33%;
+     float: left;
+}
+.col-2 {
+     width: 50%;
+     float: left;
+}
+.col-1 {
+     width: 100%;
+     float: left;
+}
+
+.author-row, .affil-row {
+    font-size: 17px;
+}
+
+.author-row-new { 
+    text-align: center; 
+}
+
+.author-row-new a {
+    display: inline-block;
+    font-size: 17px;
+    padding: 4px;
+}
+
+.author-row-new sup {
+    color: #313436;
+    font-size: 13   px;
+    padding: 4px;
+}
+
+.affiliations-new {
+    font-size: 16px;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.row {
+    margin: 16px 0px 16px 0px;
+}
+.authors {
+    font-size: 26px;
+}
+.affiliatons {
+    font-size: 18px;
+}
+.affil-row {
+    margin-top: 18px;
+}
+.teaser {
+    max-width: 100%;
+}
+.text-center {
+    text-align: center;  
+}
+.screenshot {
+    width: 256px;
+    border: 1px solid #ddd;
+}
+.screenshot-el {
+    margin-bottom: 16px;
+}
+hr {
+    height: 1px;
+    border: 0; 
+    border-top: 1px solid #ddd;
+    margin: 0;
+}
+.material-icons {
+    vertical-align: -6px;
+}
+p {
+    line-height: 1.25em;
+}
+.caption {
+    font-size: 16px;
+    color: #666;
+    margin-top: 4px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+
+video {
+    display: block;
+    margin: auto;
+}
+
+
+figure {
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#bibtex pre {
+    font-size: 14px;
+    background-color: #eee;
+    padding: 16px;
+}
+.blue {
+    color: #2c82c9;
+    font-weight: bold;
+}
+.orange {
+    color: #d35400;
+    font-weight: bold;
+}
+.flex-row {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.flex-row-center {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    justify-content: center;
+    text-align: center;
+}
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-item {
+  flex: 0 0 50%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.paper-btn-coming-soon {
+    position: relative; 
+    top: 0;
+    left: 0;
+}
+
+.coming-soon {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+}
+
+.center {
+  margin-left: 10.0%;
+  margin-right: 10.0%;
+}
+
+.paper-btn {
+  position: relative;
+  text-align: center;
+
+  display: inline-block;
+  margin: 8px;
+  padding: 8px 8px;
+
+  border-width: 0;
+  outline: none;
+  border-radius: 2px;
+  
+  background-color: #E0F7FA;
+  color: #01579B !important;
+  font-size: 20px;
+  width: 200px;
+  font-weight: 600;
+}
+
+.paper-btn-tapestry {
+  position: relative;
+  text-align: center;
+
+  display: inline-block;
+  margin: 8px;
+  padding: 8px 8px;
+
+  border-width: 0;
+  outline: none;
+  border-radius: 2px;
+  
+  background-color: #5364cc;
+  color: white !important;
+  font-size: 20px;
+  width: 200px;
+  font-weight: 600;
+}
+
+.paper-btn-parent {
+    display: flex;
+    justify-content: center;
+    margin: 16px 0px;
+}
+
+.paper-btn:hover {
+    opacity: 0.85;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.venue {
+    font-size: 23px;
+}
+
+.topnav {
+    background-color: #EEEEEE;
+    overflow: hidden;
+}
+
+.topnav div {
+    max-width: 1070px;
+    margin: 0 auto;
+}
+
+.topnav a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    vertical-align: middle;
+    padding: 16px 16px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.topnav img {
+    padding: 2px 0px;
+    width: 100%;
+    margin: 0.2em 0px 0.3em 0px;
+    vertical-align: middle;
+}
+
+pre {
+    font-size: 0.9em;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 3px;
+    background-color: rgb(235, 235, 235);
+    overflow-x: auto;
+}
+
+.download-thumb {
+    display: flex;
+}
+
+@media only screen and (max-width: 620px) {
+    .download-thumb {
+        display: none;
+    }
+}
+
+.paper-stuff {
+    width: 50%;
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 620px) {
+    .paper-stuff {
+        width: 100%;
+    }
+}
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  text-align: center;
+  float: left;
+  width: 16.666%;
+  padding: 5px;
+}
+.column3 {
+  text-align: center;
+  float: left;
+  width: 33.333%;
+  padding: 5px;
+}
+.column4 {
+  text-align: center;
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
+.column5 {
+  text-align: center;
+  float: left;
+  width: 20%;
+  padding: 5px;
+}
+.column10 {
+  text-align: center;
+  float: left;
+  width: 10%;
+  padding: 5px;
+}
+.border-right {
+    border-right: 1px solid black;
+}
+.border-bottom{
+    border-bottom: 1px solid black;
+}
+
+
+.row-center {
+    margin: 16px 0px 16px 0px;
+    text-align: center;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+.figure-img {
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+.rounded-circle {
+  border-radius: 50% !important;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 500px) {
+  .column {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .column3 {
+    width: 100%;
+  }
+}
+
+</style>
+
+<script type="text/javascript"></script>
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,600,400italic,600italic,300,300italic' rel='stylesheet' type='text/css'>
+    <head>
+        <title> Agent-FLAN </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="og:description" content=""/>
+        <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+        <link rel="icon" href = "https://images.emojiterra.com/google/noto-emoji/unicode-15.1/color/512px/1f6e0.png">
+    </head>
+
+ <body>
+
+<div class="container">
+    <div class="paper-title">
+    <h1> 
+        Agent-FLAN: Designing Data and Methods of Effective Agent Tuning for Large Language Models
+    </div>
+
+    <div id="authors">
+        <center>
+            <div class="author-row-new">
+                <a href="https://lovesnowbest.site/">Zehui Chen<sup>1,2</sup></a>,
+                Kuikun Liu<sup>2</sup>,
+                Qiuchen Wang<sup>1</sup>,
+                <a href="https://zhangwenwei.cn/">Wenwei Zhang<sup>2*</sup></a>,
+                <br>
+                Jiangning Liu<sup>2</sup>,
+                <a href="http://dahua.site/">Dahua Lin<sup>2</sup></a>,
+                <a href="https://chenkai.site/">Kai Chen<sup>2†</sup></a>
+                <a href="https://scholar.google.co.uk/citations?user=r6CvuOUAAAAJ&hl=en">Feng Zhao<sup>1†</sup></a>,
+            </div>
+        </center>
+        <center>
+        <div class="affiliations">
+            <span><sup>1</sup> University of Science and Technology of China</span>
+            <span><sup>2</sup> Shanghai AI Laboratory</span>
+        </div>
+
+        <!-- <div class="affil-row">
+            <div class="venue text-center"><b>NeurlIPS 2023 </b></div>
+        </div> -->
+
+        </center>
+
+        <div style="clear: both">
+            <div class="paper-btn-parent">
+            <a class="paper-btn" href="https://arxiv.org/abs/">
+                <span class="material-icons"> description </span> 
+                 Paper
+            </a>
+            <!-- <a class="paper-btn" href="https://colab.research.google.com/drive/1jvlzWMc6oo-TH1fYMl6hsOYfrcQj2rEs?usp=sharing">
+                <span class="material-icons"> code </span> 
+                 Colab
+            </a>
+            <a class="paper-btn-tapestry" href="https://colab.research.google.com/github/yilundu/reduce_reuse_recycle/blob/main/notebooks/image_tapestry.ipynb">
+                <span class="material-icons"> code </span> 
+                 Tapestry Colab
+            </a> -->
+            <a class="paper-btn" href="https://github.com/zehuichen123/Agent-FLAN">
+                <span class="material-icons"> code </span>
+                Code
+            </a>
+            <a class="paper-btn" href="./">
+                <span class="material-icons"> line_weight </span> 
+                 Models
+            </a>
+            </div>
+        </div>
+    </div>
+
+    <section id="teaser-image">
+        <hr>
+        <center>
+            <figure>
+                <a>
+                    <img width="95%" src="figure/teaser.png"> 
+                </a>
+                <p class="caption", style="text-align: center;">
+                    Comparison of recent agent tuning approaches on Held-In, Held-Out tasks. Performances are normalized with GPT-4 results for better visualization. * denotes our re-implementation for a fair comparison.
+                </p>
+            </figure>
+        </center>
+    </section>
+
+    <section id="abstract"/>
+        <h2 style="text-align: center;">Abstract</h2>
+        <div class="flex-row" style="width: 75%; margin: 0 auto;">
+            <p>
+                Open-sourced Large Language Models (LLMs) have achieved great success in various NLP tasks, however, they are still far inferior to API-based models when acting as agents. How to integrate agent ability into general LLMs becomes a crucial and urgent problem. This paper first delivers three key observations: (1) the current agent training corpus is entangled with both formats following and agent reasoning, which significantly shifts from the distribution of its pre-training data; (2) LLMs exhibit different learning speeds on the capabilities required by agent tasks; and (3) current approaches have side-effects when improving agent abilities by introducing hallucinations. Based on the above findings, we propose <b>Agent-FLAN</b> to effectively Fine-tune LANguage models for Agents. Through careful decomposition and redesign of the training corpus, <b>Agent-FLAN</b> enables Llama2-7B to outperform prior best works by 3.5% across various agent evaluation datasets. With comprehensively constructed negative samples, <b>Agent-FLAN</b> greatly alleviates the hallucination issues based on our established evaluation benchmark. Besides, it consistently improves the agent capability of LLMs when scaling model sizes while slightly enhancing the general capability of LLMs.
+            </p>
+        </div>
+    </section>
+
+    <section id="evaluation protocol"/>
+        <h2 style="text-align: center;">Detailed Performance</h2>
+        <div class="flex-row">
+            <p>
+                Agent-FLAN significantly outperforms previous agent-tuning approaches by a large margin on both held-in and held-out tasks. * denotes our re-implementation with the same amount of training data for a fair comparison. Since FireAct does not train on AgentInstruct dataset, we omit its performance on the HELD-IN set. Bold: the best in API-based and open-sourced models.
+            </p>
+        </div>
+    </section>
+    <section id="teaser-image">
+        <hr>
+        <center>
+            <figure>
+                <a>
+                    <img width="95%" src="figure/performance.png"> 
+                </a>
+                <p class="caption", style="text-align: center;">
+                    Figure. Performance of <b>Agent-FLAN</b>.
+                </p>
+            </figure>
+        </center>
+    </section>
+
+    <section id="evaluation protocol"/>
+        <h2 style="text-align: center;">Case Study</h2>
+        <div class="flex-row">
+            <p>
+                Comparison studies on Toolbench and Agent-H datasets between AgentTuning and Agent-FLAN with Llama2-7B. (a) ToolBench: Thanks to the capability decomposition and more focus tuning on ‘understand’, Agent-FLAN is able to catch up with the specific API information given long tool information content, whereas AgentTuning failed with hallucination. (b) Agent-H: the AgentTuning model presents a meaningless tool usage while Agent-FLAN directly gives the preferred response.
+            </p>
+            <figure>
+                <a>
+                    <img width="95%" src="figure/case_study.png"> 
+                </a>
+            </figure>
+        </div>
+    </section>
+
+
+    <section>
+        <hr>
+        This webpage template was recycled from <a href='https://nv-tlabs.github.io/LION/'>here</a>.
+        <!-- <center><p><a href='https://accessibility.mit.edu/'><b>Accessibility</b></a></p></center> -->
+    </section>
+
+    <section id="reference"/>
+    <hr>
+    <h2 style="">Citation</h2>
+    <pre>
+<code>
+TBD
+</code>
+    </pre>
+    </section>   
+
+</div>
+</body>
+</html>
