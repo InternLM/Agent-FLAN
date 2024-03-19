@@ -1,6 +1,3 @@
----
-license: apache-2.0
----
 # Agent-FLAN: Designing Data and Methods of Effective Agent Tuning for Large Language Models
 
 ## ✨ Introduction  
