@@ -44,13 +44,13 @@ The 7B model is available on Huggingface & OpenXLab model hub.
 
 |    Model    |                        Huggingface Repo                        |                  OpenXLab Repo             |
 | :---------: | :------------------------------------------------------------: | :----------------------------------------: |
-| Agent-FLAN-7B  | [Model Link](https://huggingface.co/lovesnowbest/Agent-FLAN-7b)  |   [Model Link](https://openxlab.org.cn/models/detail/OpenLMLab/Agent-FLAN-7b) |
+| Agent-FLAN-7B  | [Model Link](https://huggingface.co/internlm/Agent-FLAN-7b)  |   [Model Link](https://openxlab.org.cn/models/detail/OpenLMLab/Agent-FLAN-7b) |
 
 The Agent-FLAN dataset is also available on Huggingface dataset hub.
 
 |    Dataset    |                        Huggingface Repo                        |
 | :---------: | :------------------------------------------------------------: |
-| Agent-FLAN Dataset  | [🤗Huggingface Link](https://huggingface.co/datasets/lovesnowbest/Agent-FLAN)  |
+| Agent-FLAN  | [Dataset Link](https://huggingface.co/datasets/internlm/Agent-FLAN)  |
 
 ## 💫 Detailed Results
 
