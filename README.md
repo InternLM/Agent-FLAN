@@ -6,6 +6,7 @@
 ## ✨ Introduction  
 
 [[🤗 HuggingFace](https://huggingface.co/lovesnowbest/Agent-FLAN-7b)]
+[![Open in OpenXLab](https://cdn-static.openxlab.org.cn/header/openxlab_models.svg)](https://openxlab.org.cn/models/detail/OpenLMLab/Agent-FLAN-7b)
 [[📃 Paper](https://arxiv.org/abs/2403.12881)]
 [[🌐 Project Page](https://internlm.github.io/Agent-FLAN/)]
 
