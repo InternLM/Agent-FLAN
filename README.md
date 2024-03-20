@@ -1,5 +1,8 @@
 # Agent-FLAN: Designing Data and Methods of Effective Agent Tuning for Large Language Models
 
+[![arXiv](https://img.shields.io/badge/arXiv-2403.12881-b31b1b.svg)](https://arxiv.org/abs/2403.12881)
+[![license](https://img.shields.io/github/license/InternLM/opencompass.svg)](./LICENSE)
+
 ## ✨ Introduction  
 
 [[🤗 HuggingFace](https://huggingface.co/lovesnowbest/Agent-FLAN-7b)]
@@ -7,6 +10,11 @@
 [[🌐 Project Page](https://interlm.github.io/agent-flan/)]
 
 > Open-sourced Large Language Models (LLMs) have achieved great success in various NLP tasks, however, they are still far inferior to API-based models when acting as agents. How to integrate agent ability into general LLMs becomes a crucial and urgent problem. This paper first delivers three key observations: (1) the current agent training corpus is entangled with both formats following and agent reasoning, which significantly shifts from the distribution of its pre-training data; (2) LLMs exhibit different learning speeds on the capabilities required by agent tasks; and (3) current approaches have side-effects when improving agent abilities by introducing hallucinations. Based on the above findings, we propose Agent-FLAN to effectively Fine-tune LANguage models for Agents. Through careful decomposition and redesign of the training corpus, Agent-FLAN enables Llama2-7B to outperform prior best works by 3.5% across various agent evaluation datasets. With comprehensively constructed negative samples, Agent-FLAN greatly alleviates the hallucination issues based on our established evaluation benchmark. Besides, it consistently improves the agent capability of LLMs when scaling model sizes while slightly enhancing the general capability of LLMs.
+
+## 🚀 What's New
+
+- **[2024.3.21]** Paper available on [ArXiv](https://arxiv.org/abs/2403.12881). 🔥🔥🔥
+- **[2024.3.20]** Release the dataset and model checkpoint for Agent-FLAN. 🎉🎉🎉
 
 ## ♟️ Agent-FLAN
 
