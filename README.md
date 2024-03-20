@@ -68,7 +68,12 @@ Agent-FLAN is built with [Lagent](https://github.com/InternLM/lagent) and [T-Eva
 
 If you find this project useful in your research, please consider cite:
 ```
-TBD
+@article{chen2024agent,
+  title={Agent-FLAN: Designing Data and Methods of Effective Agent Tuning for Large Language Models},
+  author={Chen, Zehui and Liu, Kuikun and Wang, Qiuchen and Liu, Jiangning and Zhang, Wenwei and Lin, Dahua and Chen, Kai and Zhao, Feng},
+  journal={arXiv preprint arXiv:2403.12881},
+  year={2024}
+}
 ```
 
 ## 💳 License
