@@ -2,10 +2,12 @@
 
 [![arXiv](https://img.shields.io/badge/arXiv-2403.12881-b31b1b.svg)](https://arxiv.org/abs/2403.12881)
 [![license](https://img.shields.io/github/license/InternLM/opencompass.svg)](./LICENSE)
+[![Open in OpenXLab](https://cdn-static.openxlab.org.cn/header/openxlab_models.svg)](https://openxlab.org.cn/models/detail/OpenLMLab/Agent-FLAN-7b)
 
 ## ✨ Introduction  
 
 [[🤗 HuggingFace](https://huggingface.co/internlm/Agent-FLAN-7b)]
+[[🧰 OpenXLab](https://openxlab.org.cn/models/detail/OpenLMLab/Agent-FLAN-7b)]
 [[📃 Paper](https://arxiv.org/abs/2403.12881)]
 [[🌐 Project Page](https://internlm.github.io/Agent-FLAN/)]
 
