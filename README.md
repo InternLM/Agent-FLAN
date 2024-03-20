@@ -40,11 +40,11 @@ dict(role='system', begin='<|Human|>െ', end='\n '),
 dict(role='assistant', begin='<|Assistant|>െ', end='ി\n '),
 ```
 
-The 7B model is available on Huggingface model hub.
+The 7B model is available on Huggingface model hub and Models-OpenXLab.
 
-|    Model    |                        Huggingface Repo                        |
-| :---------: | :------------------------------------------------------------: |
-| Agent-FLAN-7B  | [🤗Huggingface Link](https://huggingface.co/lovesnowbest/Agent-FLAN-7b)  |
+|    Model    |                        Huggingface Repo                        |                       Models-OpenXLab                        |
+| :---------: | :------------------------------------------------------------: |:------------------------------------------------------------: |
+| Agent-FLAN-7B  | [🤗Huggingface Link](https://huggingface.co/lovesnowbest/Agent-FLAN-7b)  | [🧰 OpenXLab Link](https://openxlab.org.cn/models/detail/OpenLMLab/Agent-FLAN-7b)  |
 
 The Agent-FLAN dataset is also available on Huggingface dataset hub.
 
