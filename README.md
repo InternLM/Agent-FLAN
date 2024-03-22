@@ -6,7 +6,7 @@
 
 ## ✨ Introduction  
 
-[[🤗 HuggingFace](https://huggingface.co/internlm/Agent-FLAN-7b)]
+[[🤗 Hugging Face](https://huggingface.co/internlm/Agent-FLAN-7b)]
 [[🧰 OpenXLab](https://openxlab.org.cn/models/detail/OpenLMLab/Agent-FLAN-7b)]
 [[📃 Paper](https://arxiv.org/abs/2403.12881)]
 [[🌐 Project Page](https://internlm.github.io/Agent-FLAN/)]
@@ -29,7 +29,7 @@ Agent-FLAN series are finetuned on AgentInstruct and Toolbench by applying the d
 Comparison of recent agent tuning approaches on Held-In, Held-Out tasks. Performances are normalized with GPT-4 results for better visualization. * denotes our re-implementation for a fair comparison.
 </div>
 
-### 🤗 HuggingFace Model & Dataset
+### 🤗 Hugging Face Model & Dataset
 
 Agent-FLAN is produced by mixed training on AgentInstruct, ToolBench, and ShareGPT datasets from the Llama2-chat series.
 
@@ -40,15 +40,15 @@ dict(role='system', begin='<|Human|>െ', end='\n '),
 dict(role='assistant', begin='<|Assistant|>െ', end='ി\n '),
 ```
 
-The 7B model is available on Huggingface & OpenXLab model hub.
+The 7B model is available on Hugging Face & OpenXLab model hub.
 
-|    Model    |                        Huggingface Repo                        |                  OpenXLab Repo             |
+|    Model    |                        Hugging Face Repo                       |                  OpenXLab Repo             |
 | :---------: | :------------------------------------------------------------: | :----------------------------------------: |
 | Agent-FLAN-7B  | [Model Link](https://huggingface.co/internlm/Agent-FLAN-7b)  |   [Model Link](https://openxlab.org.cn/models/detail/OpenLMLab/Agent-FLAN-7b) |
 
-The Agent-FLAN dataset is also available on Huggingface dataset hub.
+The Agent-FLAN dataset is also available on Hugging Face dataset hub.
 
-|    Dataset    |                        Huggingface Repo                        |
+|    Dataset    |                        Hugging Face Repo                       |
 | :---------: | :------------------------------------------------------------: |
 | Agent-FLAN  | [Dataset Link](https://huggingface.co/datasets/internlm/Agent-FLAN)  |
 
